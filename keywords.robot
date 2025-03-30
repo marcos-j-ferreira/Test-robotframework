@@ -25,7 +25,7 @@ CRIAR-CONTA-EMAIL-ERRADA
 Validetion
     Sleep                      ${TIME}
     Element Should Be Visible  ${MSG-LOGIN-SUCCESSFUL-01}
-    Element Should Be Visible  ${MSG-SIGNU}
+    Element Should Be Visible  ${MSG-SIGNUP}
     Element Should Be Visible  ${BACK-LOGIN}
 
 Abrir navegador
@@ -88,3 +88,4 @@ Teste-login-passed
     Element Should Be Visible    ${MSG-LOGIN-SUCCESSFUL-01}
     Element Should Be Visible    ${MSG-LOGIN-SUCCESSFUL-02}
     Sleep                        ${TIME}
+    
