@@ -67,8 +67,8 @@ Os resultados dos testes são gerados
 
 ## Site com mais especificações da documentação 
 
--Page: https://marcos-j-ferreira.github.io/documenta-o.github.io/
--Objetivo:  Compactar todos as informações em um só lugar
+Page: https://marcos-j-ferreira.github.io/documenta-o.github.io/
+Objetivo:  Compactar todos as informações em um só lugar
 
 ## Autor
 Marcos Júnior,
