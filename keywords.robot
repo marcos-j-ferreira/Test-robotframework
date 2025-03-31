@@ -7,8 +7,8 @@ Resource   ./variables.robot
 
 Password-based Authentication
     Sleep                      ${TIME}
+    Wait Until Element Is Visible   ${BUTTON-PBA} 
     Click Link                 ${BUTTON-PBA}
-    Sleep                      ${TIME}
 
 # Realiza o cadastro de uma nova conta inserindo e-mail e senha e clicando no botão de envio.
 
@@ -35,8 +35,8 @@ CRIAR-CONTA-EMAIL-ERRADA
 
 Validetion
     Sleep                      ${TIME}
-    Element Should Be Visible  ${MSG-LOGIN-SUCCESSFUL-01}
-    Element Should Be Visible  ${MSG-SIGNUP}
+    Wait Until Element Is Visible  ${MSG-LOGIN-SUCCESSFUL-01}
+    Wait Until Element Is Visible  ${MSG-SIGNUP}
     Element Should Be Visible  ${BACK-LOGIN}
 
 # Abre o navegador com a URL e navegador especificado.
@@ -64,10 +64,9 @@ Click-Button
 # Verifica a visibilidade dos campos de e-mail e senha após uma ação.
 
 Validar-Campos
-    Sleep                        ${Time}
-    Element Should Be Visible    ${INPUT-LE}
-    Element Should Be Visible    ${INPUT-LP}
-    Sleep                        ${Time}
+    Wait Until Element Is Visible    ${INPUT-LE}
+    Wait Until Element Is Visible    ${INPUT-LP}
+    Sleep                            ${Time}
 
 # Realiza login com credenciais válidas e clica no botão de envio.
 
@@ -76,14 +75,17 @@ Login-Passed
     Input Password               ${INPUT-LP}   ${PASSWORD-v}
     Sleep                        ${TIME}
     Click Button                 ${BUTTON-SUBMIT}
-    Sleep                        ${TIME}
+   Sleep                         ${TIME}
 
 # Valida o sucesso do login verificando mensagens de confirmação.
 
 Validar-Login
-    Sleep                        ${TIME}
-    Element Should Be Visible    ${MSG-LOGIN-SUCCESSFUL-01}
-    Element Should Be Visible    ${MSG-LOGIN-SUCCESSFUL-02}
+    Sleep                            ${TIME}
+    Wait Until Element Is Visible    ${MSG-LOGIN-SUCCESSFUL-01}
+    Wait Until Element Is Visible    ${MSG-LOGIN-SUCCESSFUL-02}
+    Element Should Be Visible        ${MSG-LOGIN-SUCCESSFUL-01}
+    Element Should Be Visible        ${MSG-LOGIN-SUCCESSFUL-02}
+
 
 # Realiza uma tentativa de login com credenciais inválidas.
 
@@ -97,6 +99,7 @@ Login-failed
 
 Validar-Login-failed
     Sleep                        ${TIME}
+    Wait Until Element Is Visible    ${INVALID-LOGIN}
     Element Should Be Visible    ${INVALID-LOGIN}
 
 # Tenta fazer login com uma conta inexistente.
@@ -106,7 +109,6 @@ Login-nao-existente
     Input Password               ${INPUT-LP}   ${PASSWORD-v}
     Sleep                        ${TIME}
     Click Button                 ${BUTTON-SUBMIT}
-    Sleep                        ${TIME}
 
 # Realiza um teste completo de login com credenciais válidas e valida o sucesso.
 
@@ -116,7 +118,9 @@ Teste-login-passed
     Sleep                        ${TIME}
     Click Button                 ${BUTTON-SUBMIT}
     Sleep                        ${TIME}
-    Element Should Be Visible    ${MSG-LOGIN-SUCCESSFUL-01}
-    Element Should Be Visible    ${MSG-LOGIN-SUCCESSFUL-02}
-    Sleep                        ${TIME}
+    Wait Until Element Is Visible    ${MSG-LOGIN-SUCCESSFUL-01}
+    Wait Until Element Is Visible    ${MSG-LOGIN-SUCCESSFUL-02}
+    Element Should Be Visible        ${MSG-LOGIN-SUCCESSFUL-01}
+    Element Should Be Visible        ${MSG-LOGIN-SUCCESSFUL-02}
+    Sleep                            ${TIME}
     

@@ -5,7 +5,7 @@ Library   SeleniumLibrary
 
 # Variáveis de credenciais de login
 
-${EMAIL-NEW}                  ff@gmail.com
+${EMAIL-NEW}                  msag@gmail.com
 ${PASSWORD-NEW}               0000
 ${EMAIL-V}                    usuario@teste.com
 ${PASSWORD-v}                 Teste@1234
@@ -17,7 +17,7 @@ ${EMAIL-I}                    intelbras@intelbras.com
 
 ${BROWSER}                    Chrome
 ${URL}                        https://teste-estagiarios.vercel.app/
-${TIME}                       1
+${TIME}                       0
 
 # Variáveis dos elementos de botão
 
