@@ -65,6 +65,11 @@ Os resultados dos testes são gerados
 - `report.html`: Relatório com o resumo dos testes.
 - `output.xml`: Arquivo com os resultados brutos.
 
+## Site com mais especificações da documentação 
+
+-Page: https://marcos-j-ferreira.github.io/documenta-o.github.io/
+-Objetivo:  Compactar todos as informações em um só lugar
+
 ## Autor
 Marcos Júnior,
 marcos.j.lemes.2004@gmail.com
